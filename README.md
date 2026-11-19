@@ -38,9 +38,31 @@ def sincronizar():
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
-Problema C
+Problema C, apos os teste de falha foi identificado que a replica esta indisponivel, após realizar a verificação do programa foi identificado que na função consultar estoque, o bloco esta da seguinte maneira:
 
+ANTES
+return "INDISPONIVEL", None
 
+DEPOIS
+return "DISPONIVEL", replica["estoque"]
 
+Após fazer esta alteração a replica passou a ficar disponivel.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Questão 1. qual é a função do semaforo no processamento dos pedidos?
+R. Esta função faz com que haja um certo tempo de execução entre os processos.
+
+Questão 2. Porque é necessário sincronizar os dados entre os servidor principal e a replica.
+R. Esta função serve para que qualquer informação que seja alterada em um servidor, faça com que o outro também sofra essa mudança, mantenho ambos os servidores atualizados.
+
+Questão 3. O que significa tolerância de falhas e como ela aparece neste prgrama?
+R. A tolerancia de falhas significa que são processos que podem ser perdidos pois não afetarão no resultado final.
+
+Questão 4. Para que serve o Lock no programa e como o controle de acesso aos recursos ajuda a prevenir problemas de concorrencia?
+R. A trava serve para que o servidor não deixe que outros processos sobreescrevam os que já estão sendo executados.
+
+Questão 5. Considerando a sequencia de eventos, a sincronização deve ocorrer antes ou depois do processamento dos pedidos? Explique a relação de casualidade.
+R. A sincronização deve ocorrer depois do processamento.
 
 
