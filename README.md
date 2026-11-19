@@ -1,5 +1,9 @@
 # Prova-pratica---Sistemas-distribuídos---P2
 
+Nome: Miguel Luz Andrino
+3 semestre
+Sistemas Distribuidos.
+
 Foi nos dado uma situação onde uma equipe de Ti identificou 3 erros no funcionamento do sistema, nossa tarefa é executar o codigo e verificar quais são os pontos de falha e corrigilos.
 
 A primeira etapa foi criar o arquivo a qual iriamos conseguir utilizar o codigo, para isso criamos a pasta **simulado_distribuidos**.
